@@ -12,6 +12,10 @@ set -ouex pipefail
 # this installs a package from fedora repos
 dnf5 install -y tmux 
 
+dnf5 copr enable -y ryanabx/cosmic-epoch
+dnf5 -y install @cosmic-desktop @cosmic-desktop-apps
+dnf5 clean all
+
 # Use a COPR Example:
 #
 # dnf5 -y copr enable ublue-os/staging
